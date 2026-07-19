@@ -3,7 +3,7 @@ using TMPro;
 
 public class GameTimer : MonoBehaviour
 {
-    public float startTime = 600f; // 10 minutes
+    public float startTime = 180f; // 3 minutes
     private float currentTime;
 
     public TMP_Text timerText;
