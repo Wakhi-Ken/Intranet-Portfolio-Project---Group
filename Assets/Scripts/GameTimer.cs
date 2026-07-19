@@ -52,4 +52,11 @@ public class GameTimer : MonoBehaviour
     {
         timerRunning = false;
     }
+
+    public void ResetTimer()
+    {
+        currentTime = startTime;
+        timerRunning = false;
+        UpdateTimerDisplay();
+    }
 }
