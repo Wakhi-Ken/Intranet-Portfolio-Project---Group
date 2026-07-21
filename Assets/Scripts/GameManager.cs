@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -53,6 +54,19 @@ public class GameManager : MonoBehaviour
         gameTimer.StopTimer();
         gameTimer.ResetTimer();
         ResetPlayerPosition();
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
+    }
+
+    public void LoadNextLevel()
+    {
+        SceneManager.LoadScene("Stage 3");
     }
 
     private void ResetPlayerPosition()
