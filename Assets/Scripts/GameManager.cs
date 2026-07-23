@@ -74,6 +74,11 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Stage 2");
     }
 
+    public void GoToStage1()
+    {
+        SceneManager.LoadScene("Stage 1");
+    }
+
     private void ResetPlayerPosition()
     {
         if (playerController == null) return;
